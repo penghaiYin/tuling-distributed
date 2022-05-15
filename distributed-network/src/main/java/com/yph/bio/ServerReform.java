@@ -12,7 +12,7 @@ import java.util.concurrent.Executors;
 /**
  *@author Mark老师
  *
- *类说明：Bio通信的服务端
+ * BIO 改造，服务端利用线程池处理
  */
 public class ServerReform {
 

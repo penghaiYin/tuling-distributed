@@ -10,8 +10,7 @@ public class Const {
 
     /*根据输入信息拼接出一个应答信息*/
     public static String response(String msg){
-        return "Hello,"+msg+",Now is "+new java.util.Date(
-                System.currentTimeMillis()).toString() ;
+        return "她确实傻" ;
     }
 
 }

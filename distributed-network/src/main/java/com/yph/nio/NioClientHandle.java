@@ -120,7 +120,7 @@ public class NioClientHandle implements Runnable {
                     // 将缓冲区可读字节数组复制到新建的数组中
                     buffer.get(bytes);
                     String result = new String(bytes, "UTF-8");
-                    System.out.println("客户端收到消息：" + result);
+                    System.out.println("服务端说：" + result);
                 }
                 //返回-1表示TCP关闭，释放资源
                 else if (readBytes < 0) {

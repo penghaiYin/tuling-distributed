@@ -94,12 +94,11 @@ public class NioServerHandle implements Runnable{
                 /*从通道里读取数据，然后写入buffer*/
                 int readBytes = sc.read(buffer);
                 if(readBytes>0){
-                    /*将缓冲区当前的limit设置为position,position=0，
-                    用于后续对缓冲区的读取操作*/
+                    /*切换读模式*/
                     buffer.flip();
-                    /*根据缓冲区可读字节数创建字节数组*/
+
                     byte[] bytes = new byte[buffer.remaining()];
-                    /*将缓冲区可读字节数组复制到新建的数组中*/
+                    /*将缓冲区的可读字节数组读到新建的数组中*/
                     buffer.get(bytes);
                     String message = new String(bytes,"UTF-8");
                     System.out.println("服务器收到消息："+message);
