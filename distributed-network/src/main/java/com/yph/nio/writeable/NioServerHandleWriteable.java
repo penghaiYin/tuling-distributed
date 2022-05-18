@@ -14,7 +14,7 @@ import static com.yph.Const.response;
 
 
 /**
- * @author Mark老师
+ * @author yph
  * 类说明：nio通信服务端处理器
  */
 public class NioServerHandleWriteable implements Runnable{

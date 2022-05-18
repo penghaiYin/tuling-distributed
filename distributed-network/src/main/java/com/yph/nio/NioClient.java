@@ -7,7 +7,7 @@ import static com.yph.Const.DEFAULT_SERVER_IP;
 
 
 /**
- * @author Mark老师
+ * @author yph
  * 类说明：nio通信客户端
  */
 public class NioClient {

@@ -10,7 +10,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- *@author Mark老师
+ *@author yph
  *
  * BIO 改造，服务端利用线程池处理
  */

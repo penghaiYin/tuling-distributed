@@ -1,7 +1,7 @@
 package com.yph;
 
 /**
- * @author Mark老师
+ * @author yph
  * 类说明：
  */
 public class Const {

@@ -1,4 +1,4 @@
-package basic.echo;
+package com.yph.introduction.echo;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -15,7 +15,7 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     /*读取到网络数据后进行业务处理,并关闭连接*/
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, ByteBuf msg) throws Exception {
-        System.out.println("from server: " + msg.toString(CharsetUtil.UTF_8));
+        System.out.println("client Accept"+msg.toString(CharsetUtil.UTF_8));
         //关闭连接
         ///ctx.close();
     }
@@ -24,7 +24,7 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         ctx.writeAndFlush(Unpooled.copiedBuffer(
-                "Hello,Netty", CharsetUtil.UTF_8));
+                "Hello,Netty",CharsetUtil.UTF_8));
 //        ctx.pipeline().write()
 //        ctx.channel().write()
         ctx.alloc().buffer();

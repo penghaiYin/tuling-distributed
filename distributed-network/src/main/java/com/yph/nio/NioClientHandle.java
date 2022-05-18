@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 /**
- * @author Mark老师
+ * @author yph
  * 类说明：nio通信客户端处理器
  */
 public class NioClientHandle implements Runnable {
