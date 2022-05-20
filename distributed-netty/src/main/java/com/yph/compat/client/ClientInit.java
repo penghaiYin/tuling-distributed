@@ -17,6 +17,7 @@ import io.netty.handler.timeout.ReadTimeoutHandler;
 public class ClientInit extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
+        // 这里打印的是16进制的数据
         ch.pipeline().addLast(new LoggingHandler(LogLevel.DEBUG));
 
         /*连接写空闲检测*/
@@ -32,6 +33,7 @@ public class ClientInit extends ChannelInitializer<SocketChannel> {
         ch.pipeline().addLast(new KryoDecoder());
         ch.pipeline().addLast(new KryoEncoder());
 
+        // 这里打印的是反序列化之后的数据
         ch.pipeline().addLast(new LoggingHandler(LogLevel.DEBUG));
         ch.pipeline().addLast(new LoginAuthReqHandler());
 
