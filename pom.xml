@@ -12,6 +12,7 @@
         <module>distributed-netty</module>
         <module>distributed-zookeeper</module>
         <module>distributed-rabbitmq</module>
+        <module>distributed-kafka</module>
     </modules>
     <packaging>pom</packaging>
 
