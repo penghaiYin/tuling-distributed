@@ -2,20 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>tuling-distributed</artifactId>
+        <groupId>com.yph</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yph</groupId>
-    <artifactId>tuling-distributed</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>distributed-network</module>
-        <module>distributed-netty</module>
-        <module>distributed-zookeeper</module>
-        <module>distributed-rabbitmq</module>
-        <module>distributed-kafka</module>
-        <module>distributed-rocketmq</module>
-    </modules>
+    <artifactId>distributed-rocketmq</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>rocketmq-api</module>
+        <module>rocketmq-sc</module>
+        <module>rocketmq-springboot</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
